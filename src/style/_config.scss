@@ -1,0 +1,33 @@
+@import 'common/mixins';
+@import 'common/reset';
+@import 'common/fonts';
+
+// VARIABLES
+$accent: orange; // Accent Color
+$font: 16px/1.25 ;// Font Size/Line Height
+$primary: #333; // Text Color
+$secondary: #333; // Text Color
+// breakpoints
+$xxl: 1400px;
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+// GLOBAL STYLES
+
+html,
+body {
+	min-height: 100%;
+	position: relative;
+  font: $font;
+}
+
+input, textarea{
+  box-sizing: border-box;
+  outline: transparent;
+}
+
+.container{
+  max-width: $xxl;
+}
