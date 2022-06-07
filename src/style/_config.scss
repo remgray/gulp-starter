@@ -4,7 +4,8 @@
 
 // VARIABLES
 $accent: orange; // Accent Color
-$font: 16px/1.25 ;// Font Size/Line Height
+$font-size: 16px ;// Document Font Size
+$line-height: 1.25; // Document Line Height
 $primary: #333; // Text Color
 $secondary: #333; // Text Color
 // breakpoints
@@ -15,12 +16,12 @@ $md: 768px;
 $sm: 576px;
 
 // GLOBAL STYLES
-
 html,
 body {
 	min-height: 100%;
 	position: relative;
-  font: $font;
+  font-size: $font-size;
+  line-height: $line-height;
 }
 
 input, textarea{

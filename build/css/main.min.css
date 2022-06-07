@@ -53,6 +53,19 @@ table {
   border-spacing: 0;
 }
 
+html,
 body {
-  font-size: 1px;
+  min-height: 100%;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+input, textarea {
+  box-sizing: border-box;
+  outline: transparent;
+}
+
+.container {
+  max-width: 1400px;
 }
