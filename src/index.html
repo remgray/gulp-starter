@@ -7,9 +7,15 @@
 })
 
 <body>
-  @@include('components/_global/_header.html', {})
-  <img src="@img/cat.jpg" alt="">
-  @@include('components/_global/_footer.html', {})
+  <div class="content-wrapper">
+    @@include('components/_global/_header.html', {})
+    <main>
+
+    </main>
+  </div>
+  <div class="footer-wrapper">
+    @@include('components/_global/_footer.html', {})
+  </div>
   @@include('components/_global/_scripts.html', {})
 </body>
 

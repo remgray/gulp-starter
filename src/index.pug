@@ -4,12 +4,16 @@ html(lang=LANG.locale)
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    meta(name="description" content="description")
-    meta(name="keywords" content="keywords")
+    meta(name="description" content="Site description")
+    meta(name="keywords" content="Keywords")
     title Site title
-    link(rel="shortcut icon" href="img/favicon/favicon.svg" type="image/svg+xml")
-    link(rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon")
-    link(rel="stylesheet", href="css/main.min.css")
+    link(rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml")
+    link(rel="icon" href="img/favicon/favicon.png" type="image/png")
+    link(rel="stylesheet", href="css/bundle.min.css")
   body 
-    include html/global/header.pug
-    div= LANG.hello
+    .content-wrapper
+      header
+      main
+    .footer-wrapper
+      footer
+    scripts

@@ -9,4 +9,16 @@
 		font-style: $style;
 		font-display: swap;
 	}
-}
+};
+
+@mixin w_992 {
+  @media (max-width: 992.1px) {
+    @content
+  }
+};
+
+@mixin h_320 {
+  @media (max-height: 992.1px) {
+    @content
+  }
+};
