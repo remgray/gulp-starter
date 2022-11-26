@@ -1,4 +1,4 @@
-@@include('components/_global/_head.html',{
+@@include('templates/_global/_head.html',{
 "lang":"en",
 "title":"Site title",
 "description":"Site description",
@@ -8,15 +8,15 @@
 
 <body>
   <div class="content-wrapper">
-    @@include('components/_global/_header.html', {})
+    <!-- @@include('templates/_global/header.html', {}) -->
     <main>
-
+      <div class="container">@@include('components/Tabs/tabs.html')</div>
     </main>
   </div>
   <div class="footer-wrapper">
-    @@include('components/_global/_footer.html', {})
+    @@include('templates/_global/footer.html', {})
   </div>
-  @@include('components/_global/_scripts.html', {})
+  @@include('templates/_global/_scripts.html', {})
 </body>
 
 </html>

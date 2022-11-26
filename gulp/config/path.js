@@ -19,7 +19,7 @@ export const path = {
   },
   src: {
     html: `${srcFolder}/*${(config.pug ? ".pug" : ".html")}`,
-    scss: `${srcFolder}/style/main.scss`,
+    scss: `${srcFolder}/style/bundle.scss`,
     js: `${srcFolder}/js/app.js`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/img/**/*.svg`,

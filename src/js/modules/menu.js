@@ -1,44 +1,53 @@
-import { getScrollbarWidth, showScroll, hideScroll } from './sidebarSwitcher.js'
+import { showScroll, hideScroll } from './sidebarSwitcher.js'
 
-getScrollbarWidth();
+// Menu selectors
+const menu = document.querySelector('.js-menu'),
+closeMenuBtns = document.querySelectorAll('.js-close'),
+burger = document.querySelector('.burger')
 
-// Menu
-// const burger = document.querySelector('.burger'),
-//   menu = document.querySelector('.js-menu'),
-//   closeMenuBtns = document.querySelectorAll('.js-close-btn')
+// Reset all classes
+const resetNav = () => {
+  menu.classList.remove('menu-open');
+  burger.classList.remove('active');
+  showScroll();
+}
 
-// const resetNav = () => {
-//   menu.classList.remove('menu-open');
-//   burger.classList.remove('active');
-//   showScroll();
-// }
-const burger = document.querySelector('.burger')
-// window.addEventListener('resize', resetNav);
+// Reset all classes on resize
+window.addEventListener('resize', () => {
+  if (menu.classList.contains('menu-open')){
+    resetNav()
+  }
+});
+
+// Show/Hide scroll on burger click
 burger.addEventListener('click', () => {
-  burger.classList.toggle('active');
-  if (burger.classList.contains('active')){
+  if (burger.classList.contains('active')) {
     hideScroll()
   } else {
     showScroll()
   }
 })
-// function classToggleHandler() {
-//   burger.classList.toggle('active');
-//   menu.classList.toggle('menu-open');
-//   if (menu.classList.contains('menu-open')) {
-//     hideScroll()
-//   } else {
-//     showScroll()
-//   }
-//   return
-// }
 
-// burger.addEventListener('click', () => {
-//   classToggleHandler();
-// })
+// Open/Hide menu on click
+function classToggleHandler() {
+  burger.classList.toggle('active');
+  menu.classList.toggle('menu-open');
+  if (menu.classList.contains('menu-open')) {
+    hideScroll()
+  } else {
+    showScroll()
+  }
+  return
+}
 
-// closeMenuBtns.forEach(btn => {
-//   btn.addEventListener('click', () => {
-//     resetNav()
-//   })
-// })
+// Toggle burger class
+burger.addEventListener('click', () => {
+  classToggleHandler();
+})
+
+// Reset all classes on click js-close buttons
+closeMenuBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    resetNav()
+  })
+})
