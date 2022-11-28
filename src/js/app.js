@@ -34,38 +34,3 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
-
-
-const tabPanelBtns = document.querySelectorAll('.js-tab-btn'),
-  tabs = document.querySelectorAll('[data-tab]')
-
-const resetTabs = () => {
-  tabs.forEach(tab => tab.classList.remove('active'))
-}
-
-const resetBtns = () => {
-  tabPanelBtns.forEach(btn => btn.classList.remove('active'))
-}
-
-const initTabs = () => {
-  resetTabs()
-  resetBtns()
-
-  document.querySelector(`[data-tab='0']`).classList.add('active')
-  tabPanelBtns[0].classList.add('active')
-}
-
-const tabChangeHandler = () => {
-  tabPanelBtns.forEach((btn, i) => {
-    btn.addEventListener('click', () => {
-      resetBtns();
-      resetTabs()
-      btn.classList.add('active')
-      document.querySelector(`[data-tab='${i}']`).classList.add('active')
-    })
-
-  })
-}
-initTabs()
-tabChangeHandler()
