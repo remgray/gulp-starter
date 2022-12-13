@@ -5,10 +5,10 @@
 // VARIABLES
 $font-size: 16px ;// Document Font Size
 $line-height: 1.25; // Document Line Height
-$primary: #333; // Primary Site Color
+$primary: #333;
+$secondary: orange;
 $dark: #333; // Dark Site Color
 $light: #FFF; // Light Site Color
-$accent: orange; // Accent Color
 // breakpoints
 $xxl: 1400px;
 $xl: 1200px;
@@ -28,6 +28,8 @@ body {
 body{
   display: flex;
   flex-direction: column;
+  font-family: sans-serif;
+  color: $dark;
 }
 .content-wrapper{
   flex: 1 0 auto;
@@ -42,4 +44,13 @@ body{
 }
 .section-block{
   padding: 80px 0;
+  @include w_768{
+    padding: 50px 0;
+  }
+}
+.section-title{
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
 }

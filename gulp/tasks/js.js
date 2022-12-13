@@ -7,7 +7,20 @@ export const js = () => {
       mode: app.isBuild ? "production" : "development",
       output: {
         filename: 'app.min.js'
-      }
+      },
+      module: {
+        rules: [{
+          test: /\.m?js/,
+          type: "javascript/auto",
+        },
+        {
+          test: /\.m?js/,
+          resolve: {
+            fullySpecified: false,
+          },
+        },
+        ],
+      },
     }))
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write('../js'))
