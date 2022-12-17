@@ -1,5 +1,4 @@
 .header {
-  border: 1px solid red;
   position: fixed;
   left: 0;
   top: 0;
@@ -37,7 +36,7 @@
   &__menu {
     @include w_768 {
       padding: 20px 0;
-      background: $accent;
+      background: $primary;
       height: 100%;
       min-height: 300px;
       display: flex;
@@ -84,13 +83,13 @@
   width: 24px;
   height: 2px;
   border-radius: 6px;
-  background: $primary;
+  background: $secondary;
   transition: all 0.2s ease-in-out;
 }
 .burger span:nth-child(1),
 .burger span:nth-child(3) {
   content: "";
-  background: $primary;
+  background: $secondary;
   width: 24px;
   height: 2px;
   border-radius: 6px;
