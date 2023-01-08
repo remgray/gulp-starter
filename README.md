@@ -1,6 +1,6 @@
 Commands
 
-npm run dev - start development version
+npm run start - start development version
 
 npm run build - create a build folder
 
