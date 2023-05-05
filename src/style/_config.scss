@@ -1,59 +1,43 @@
-@import 'common/mixins';
-@import 'common/reset';
-@import 'common/fonts';
-
-// VARIABLES
-$font-size: 16px ;// Document Font Size
-$line-height: 1.25; // Document Line Height
-$primary: #333;
-$secondary: orange;
-$dark: #333; // Dark Site Color
-$light: #FFF; // Light Site Color
-// breakpoints
-$xxl: 1400px;
-$xl: 1200px;
-$lg: 992px;
-$md: 768px;
-$sm: 576px;
-
-$index: calc(1vh + 1vw); // index for adaptive resize _font-size: calc($index * 2)_
+@import "common/vars";
+@import "common/mixins";
+@import "common/reset";
+@import "common/fonts";
 
 // GLOBAL STYLES
 html,
 body {
 	height: 100%;
-  font-size: $font-size;
-  line-height: $line-height;
+	font-size: $font-size;
 }
-body{
-  display: flex;
-  flex-direction: column;
-  font-family: sans-serif;
-  color: $dark;
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: $font-family;
+	color: $dark-color;
 }
-.content-wrapper{
-  flex: 1 0 auto;
+.content-wrapper {
+	flex: 1 0 auto;
 }
-.footer-wrapper{
-  flex: 0 0 auto;
+.footer-wrapper {
+	flex: 0 0 auto;
 }
-.container{
-  max-width: $xxl;
-  margin: 0 auto;
-  padding: 0 15px;
+.container {
+	max-width: $content-width;
+	margin: 0 auto;
+	padding: 0 $container-offset;
 }
-.section-block{
-  padding: 80px 0;
-  @include w_768{
-    padding: 50px 0;
-  }
+.section-block {
+	padding: 80px 0;
+	@include w_768 {
+		padding: 50px 0;
+	}
 }
-.section-title{
-  font-size: 40px;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 50px;
-  @include w_768{
-    font-size: 30px;
-  }
+.section-title {
+	font-size: 40px;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 50px;
+	@include w_768 {
+		font-size: 30px;
+	}
 }

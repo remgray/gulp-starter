@@ -1,36 +1,47 @@
 @mixin font-face($name, $file, $weight: 400, $style: normal) {
 	@font-face {
 		font-family: "#{$name}";
-		src: local("#{$file}"),
-		url('../fonts/#{$file}.woff2') format('woff2'),
-		url('../fonts/#{$file}.woff') format('woff'),
-		url('../fonts/#{$file}.svg#Roboto-Bold') format('svg');
+		src: local("#{$file}"), url("../fonts/#{$file}.woff2") format("woff2"), url("../fonts/#{$file}.woff") format("woff");
 		font-weight: $weight;
 		font-style: $style;
 		font-display: swap;
 	}
-};
+}
+
+@mixin hover {
+	@media (any-hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+}
 
 @mixin w_992 {
-  @media (max-width: 992.1px) {
-    @content
-  }
-};
+	@media (max-width: 992.1px) {
+		@content;
+	}
+}
 
 @mixin w_768 {
-  @media (max-width: 768.1px) {
-    @content
-  }
-};
+	@media (max-width: 768.1px) {
+		@content;
+	}
+}
 
 @mixin w_480 {
-  @media (max-width: 480.1px) {
-    @content
-  }
-};
+	@media (max-width: 480.1px) {
+		@content;
+	}
+}
+
+@mixin w_400 {
+	@media (max-width: 400.1px) {
+		@content;
+	}
+}
 
 @mixin h_320 {
-  @media (max-height: 992.1px) {
-    @content
-  }
-};
+	@media (max-height: 992.1px) {
+		@content;
+	}
+}
