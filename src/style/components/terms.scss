@@ -1,6 +1,5 @@
 .terms-page {
-	// background: url(@img/terms/bg.png);
-	color: $dark-color;
+	color: var(--dark-color);
 	.footer {
 		&__text {
 			margin: 0 auto 20px;
@@ -140,7 +139,7 @@
 		-ms-user-select: none;
 		user-select: none;
 		color: #fff;
-		background-color: $primary-color;
+		background-color: var(--primary-color);
 	}
 
 	.form-btn:hover {
@@ -179,6 +178,6 @@
 	}
 	.btn {
 		margin: 20px auto 0;
-		color: $dark-color;
+		color: var(--dark-color);
 	}
 }
