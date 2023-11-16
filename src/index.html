@@ -1,19 +1,14 @@
 @@include('templates/_global/_head.html',{
-"lang":"en",
 "title":"Site title",
 "description":"Site description",
 "keywords":"",
-"favicon":"img/favicons/favicon",
 })
 
 <body>
-  <div class="content-wrapper">
-    @@include('templates/_global/header.html', {})
-  </div>
-  <div class="footer-wrapper">
-    @@include('templates/_global/footer.html', {})
-  </div>
-  @@include('templates/_global/_scripts.html', {})
+	@@include('templates/_global/header.html', {})
+	<main></main>
+	@@include('templates/_global/footer.html', {})
+	@@include('templates/_global/_scripts.html', {})
 </body>
 
 </html>

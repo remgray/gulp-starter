@@ -5,7 +5,7 @@
 	"main": "gulpfile.js",
 	"type": "module",
 	"scripts": {
-		"start": "gulp",
+		"dev": "gulp",
 		"build": "gulp build --build",
 		"zip": "gulp deployZip --build",
 		"deploy": "gulp deployFTP --build"
@@ -16,7 +16,6 @@
 		"@types/node": "^17.0.40",
 		"browser-sync": "latest",
 		"css-loader": "^6.8.1",
-		"style-loader": "^3.3.3",
 		"del": "^7.0.0",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^8.0.0",
@@ -38,6 +37,8 @@
 		"gulp-version-number": "^0.2.4",
 		"gulp-zip": "^5.1.0",
 		"sass": "^1.52.2",
+		"style-loader": "^3.3.3",
+		"terser-webpack-plugin": "^5.3.9",
 		"vinyl-ftp": "^0.6.1",
 		"webpack": "^5.73.0",
 		"webpack-stream": "^7.0.0"

@@ -1,5 +1,6 @@
 import webpack from "webpack-stream";
 import sourcemaps from 'gulp-sourcemaps';
+import TerserPlugin from 'terser-webpack-plugin'
 
 export const js = () => {
 	return app.gulp.src(app.path.src.js)
@@ -23,6 +24,20 @@ export const js = () => {
 					test: /\.css$/,
 					use: ['style-loader', 'css-loader'],
 				},
+				],
+			},
+			optimization: {
+				minimize: true,
+				minimizer: [
+					new TerserPlugin({
+						terserOptions: {
+							output: {
+								comments: true,
+								beautify: false,
+							},
+							mangle: false
+						},
+					}),
 				],
 			},
 		}))

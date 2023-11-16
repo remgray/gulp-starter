@@ -20,15 +20,15 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul,
+ol {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
 
 /* Set core root defaults */
-html:focus-within {
+html {
 	scroll-behavior: smooth;
 }
 
@@ -73,9 +73,9 @@ select {
 	*,
 	*::before,
 	*::after {
-		animation-duration: 0.01ms !important;
+		animation-duration: 1ms !important;
 		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
+		transition-duration: 1ms !important;
 		scroll-behavior: auto !important;
 	}
 }
