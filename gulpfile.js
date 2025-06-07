@@ -15,20 +15,24 @@ import { zip } from './gulp/tasks/zip.js';
 import { ftp } from './gulp/tasks/ftp.js';
 
 global.app = {
-  isBuild: process.argv.includes('--build'),
-  isDev: !process.argv.includes('--build'),
-  path,
-  gulp,
-  plugins
+	isBuild: process.argv.includes('--build'),
+	isDev: !process.argv.includes('--build'),
+	path,
+	gulp,
+	plugins
 }
+
+process.on('unhandledRejection', err => {
+	console.error('UNHANDLED REJECTION:', err);
+});
 
 // watcher
 function watcher() {
-  gulp.watch(path.watch.files, copy)
-  gulp.watch(path.watch.html, html)
-  gulp.watch(path.watch.scss, scss)
-  gulp.watch(path.watch.js, js)
-  gulp.watch(path.watch.images, images)
+	gulp.watch(path.watch.copy, copy)
+	gulp.watch(path.watch.html, html)
+	gulp.watch(path.watch.scss, scss)
+	gulp.watch(path.watch.js, js)
+	gulp.watch(path.watch.images, images)
 }
 
 const mainTasks = gulp.parallel(copy, html, scss, js, images, fonts)

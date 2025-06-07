@@ -1,7 +1,7 @@
-@import "common/vars";
-@import "common/mixins";
-@import "common/reset";
-@import "common/fonts";
+@import "vars";
+@import "mixins";
+@import "reset";
+@import "fonts";
 
 // GLOBAL STYLES
 html,
@@ -11,17 +11,17 @@ body {
 body {
 	display: flex;
 	flex-direction: column;
-	font-family: var(--font-family);
-	font-size: var(--font-size);
-	color: var(--dark-color);
+	font-family: $font-family;
+	font-size: $font-size;
+	color: $dark-color;
 }
 main {
 	flex: 1;
 }
 .container {
-	max-width: var(--content-width);
+	max-width: $content-width;
 	margin: 0 auto;
-	padding: 0 var(--container-offset);
+	padding: 0 $container-offset;
 }
 .section-padding {
 	padding: 80px 0;

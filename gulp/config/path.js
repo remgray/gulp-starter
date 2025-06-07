@@ -4,35 +4,41 @@ const rootFolder = nodePath.basename(nodePath.resolve());
 // const buildFolder = '/OSPanel/domains/';
 const buildFolder = './build';
 const srcFolder = './src';
+
 const config = {
-	DEFAULT_LOCALE: 'en'
+	pug: true,
+	DEFAULT_LOCALE: 'en',
+	localesPath: './src/locale',
 }
+
+const templateExt = config.pug ? 'pug' : 'html';
+const templatePattern = config.pug ? 'pug' : '{pug,html}';
 
 export const path = {
 	build: {
 		html: `${buildFolder}/`,
 		css: `${buildFolder}/css/`,
 		js: `${buildFolder}/js/`,
-		images: `${buildFolder}/img/`,
-		fonts: `${buildFolder}/fonts/`,
-		assets: `${buildFolder}/assets/`
+		images: `${buildFolder}/assets/img/`,
+		fonts: `${buildFolder}/assets/fonts/`,
+		copy: `${buildFolder}/`
 	},
 	src: {
-		html: `${srcFolder}/*.{pug,html}`,
-		scss: `${srcFolder}/style/bundle.scss`,
+		html: `${srcFolder}/*.${templatePattern}`,
+		scss: `${srcFolder}/style/main.scss`,
 		js: `${srcFolder}/js/app.js`,
-		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
-		svg: `${srcFolder}/img/**/*.svg`,
-		fonts: `${srcFolder}/fonts/**/*.*`,
-		assets: `${srcFolder}/assets/**/*.*`,
+		images: `${srcFolder}/assets/img/**/*.{jpg,jpeg,png,gif,webp}`,
+		svg: `${srcFolder}/assets/img/**/*.svg`,
+		fonts: `${srcFolder}/assets/fonts/**/*.*`,
+		copy: `${srcFolder}/copy/**/*.*`,
 	},
 	watch: {
-		html: `${srcFolder}/**/*.{pug,html}`,
+		html: `${srcFolder}/**/*.${templateExt}`,
 		scss: `${srcFolder}/style/**/*.scss`,
 		js: `${srcFolder}/js/**/*.js`,
-		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg}`,
+		images: `${srcFolder}/assets/img/**/*.{jpg,jpeg,png,gif,webp,svg}`,
 		locales: `${srcFolder}/locale/*`,
-		assets: `${srcFolder}/assets/**/*.*`
+		copy: `${srcFolder}/copy/**/*.*`
 	},
 	clean: buildFolder,
 	buildFolder,

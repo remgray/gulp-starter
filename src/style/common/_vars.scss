@@ -1,14 +1,12 @@
-:root {
-	--content-width: 1200px;
-	--container-offset: 15px;
-	--offset: 32px;
+$content-width: 1200px;
+$container-offset: 15px;
+$offset: 32px;
 
-	--primary-color: #6c99d4;
-	--secondary-color: #6c99d4;
-	--light-color: #fff;
-	--dark-color: #333;
+$primary-color: #6c99d4;
+$secondary-color: #6c99d4;
+$light-color: #fff;
+$dark-color: #333;
 
-	--font-family: sans-serif;
-	--font-size: 16px;
-	--line-height-text: 1.6;
-}
+$font-family: sans-serif;
+$font-size: 16px;
+$line-height-text: 1.6;
